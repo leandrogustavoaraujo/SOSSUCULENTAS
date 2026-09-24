@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123e32">
+  <meta name="description" content="Toma una foto de tu suculenta y recibe orientación clara sobre qué observar y qué cuidados revisar.">
+  <title>SOS Suculentas · Mini Vivero Rentable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="SOS Suculentas, inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 29c-1-8 0-13 1-18M16 21C7 22 4 17 4 11c7-1 11 1 13 7M17 15c0-7 4-10 11-11 1 7-2 12-11 13"/></svg></span>
+      <span>SOS <strong>Suculentas</strong><small>MINI VIVERO RENTABLE</small></span>
+    </a>
+    <span class="topbar-tag"><span class="dot"></span> TU ASISTENTE DE CUIDADO</span>
+  </header>
+
+  <main id="inicio">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow"><span aria-hidden="true">✦</span> UN POCO DE AYUDA, JUSTO A TIEMPO</span>
+        <h1>Cuida mejor tu <em>suculenta.</em></h1>
+        <p>Sube una foto de tu suculenta y recibe una orientación sencilla para cuidar la luz, el riego, el sustrato y su crecimiento.</p>
+        <div class="hero-points" aria-label="Cómo funciona"><span><b>01</b> Sube tu foto</span><i></i><span><b>02</b> Recibe orientación</span><i></i><span><b>03</b> Cuida con claridad</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-photo"></div>
+        <div class="floating-note"><span class="note-icon">✦</span><span><b>Una foto, más claridad</b><small>Observa · entiende · actúa</small></span></div>
+      </div>
+    </section>
+
+    <section class="workspace shell" aria-labelledby="form-title">
+      <div class="workspace-heading"><div><span class="section-kicker">EMPECEMOS</span><h2 id="form-title">Muéstranos tu planta</h2><p>Sube una foto y descubre los cuidados esenciales para mantenerla saludable.</p></div><span class="step-pill">PASO 1 DE 2</span></div>
+      <div class="workspace-grid">
+        <form id="analysis-form" class="upload-card" novalidate>
+          <label for="photo" id="drop-zone" class="drop-zone">
+            <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" required>
+            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l1.5-2h7L17 7h3v12H4V7Z"/><circle cx="12" cy="13" r="3"/><path d="M18 10h.01"/></svg></span>
+            <strong id="photo-title">Sube o toma una foto</strong>
+            <span id="photo-help">Toca aquí o arrastra una imagen</span>
+            <small>JPG, PNG o WEBP · hasta 10 MB</small>
+            <img id="photo-preview" alt="Vista previa de tu suculenta" hidden>
+            <span id="change-photo" class="change-photo" hidden>Cambiar foto</span>
+          </label>
+
+          <div class="care-fields">
+            <h3>Cuéntanos un poco más <span>OPCIONAL</span></h3>
+            <div class="field-grid">
+              <label>¿Cuándo la regaste?<select id="watering" name="watering"><option value="No informado">Seleccionar</option><option>Hace menos de 3 días</option><option>Hace 4 a 7 días</option><option>Hace 1 a 2 semanas</option><option>Hace más de 2 semanas</option><option>No lo recuerdo</option></select></label>
+              <label>¿Qué luz recibe?<select id="light" name="light"><option value="No informado">Seleccionar</option><option>Sol directo</option><option>Mucha luz indirecta</option><option>Poca luz</option><option>No lo sé</option></select></label>
+            </div>
+            <label class="drainage-label">¿La maceta tiene un agujero de drenaje?<select id="drainage" name="drainage"><option value="No informado">Seleccionar</option><option>Sí, tiene drenaje</option><option>No tiene drenaje</option><option>No lo sé</option></select></label>
+          </div>
+          <details class="access-details"><summary>Tengo un código de acceso <span>+</span></summary><label for="access-code">Código de acceso</label><input id="access-code" type="text" autocomplete="off" placeholder="Escribe tu código si te lo entregaron"></details>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <button id="analyze-button" class="primary-button" type="submit"><span class="button-symbol">✦</span><span>VER CÓMO CUIDAR MI SUCULENTA</span><span class="button-arrow">→</span></button>
+          <p class="privacy-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 16 5v4c0 4-2.5 7-6 9-3.5-2-6-5-6-9V5l6-3Z"/></svg>Tu foto se envía de forma segura y no se guarda en este sitio.</p>
+        </form>
+
+        <aside class="guide-card"><div class="guide-head"><span class="guide-icon">☀</span><span>PARA UNA MEJOR ORIENTACIÓN</span></div><h3>Una buena foto<br>marca la diferencia.</h3><ul><li><span>1</span>Busca luz natural y enfoca bien las hojas.</li><li><span>2</span>Muestra también el tallo y el sustrato.</li><li><span>3</span>Evita filtros o fotos muy lejanas.</li></ul><div class="guide-bottom"><span class="mini-leaf">✳</span><p>No necesitas saber el nombre de la especie para comenzar.</p></div></aside>
+      </div>
+    </section>
+
+    <section id="result-section" class="result-section shell" aria-labelledby="result-title" hidden>
+      <div class="result-top"><div><span class="section-kicker">TU RESULTADO</span><h2 id="result-title">Esto es lo que observamos</h2><p>Una guía para decidir qué revisar primero.</p></div><button id="new-analysis" class="text-button" type="button">Analizar otra planta ↗</button></div>
+      <div id="result-content"></div>
+    </section>
+  </main>
+
+  <footer><span>SOS Suculentas <small>por Mini Vivero Rentable</small></span><p>La orientación visual no sustituye la evaluación de un especialista.</p></footer>
+</body>
+</html>
