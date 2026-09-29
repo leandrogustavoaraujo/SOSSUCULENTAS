@@ -24,11 +24,11 @@ function selectPhoto(file) {
   clearError();
   if (!file) return;
   if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-    showError('Elige una foto JPG, PNG o WEBP.');
+    showError('Escolha uma foto JPG, PNG ou WEBP.');
     return;
   }
   if (file.size > 10_000_000) {
-    showError('La foto pesa más de 10 MB. Elige una imagen más pequeña.');
+    showError('A foto tem mais de 10 MB. Escolha uma imagem menor.');
     return;
   }
   if (previewUrl) URL.revokeObjectURL(previewUrl);
@@ -54,7 +54,7 @@ async function prepareImage(file) {
     const image = new Image();
     const url = URL.createObjectURL(file);
     image.onload = () => { URL.revokeObjectURL(url); resolve(image); };
-    image.onerror = () => { URL.revokeObjectURL(url); reject(new Error('No pudimos abrir esta foto. Prueba con otra imagen.')); };
+    image.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Não foi possível abrir esta foto. Tente outra imagem.')); };
     image.src = url;
   });
   try {
@@ -101,7 +101,7 @@ function textPanel(title, value, wide = false) {
 
 function showResult(result, mode) {
   const isGeneral = mode === 'general';
-  document.getElementById('result-title').textContent = isGeneral ? 'Cuidados para tu suculenta' : 'Esto es lo que observamos';
+  document.getElementById('result-title').textContent = isGeneral ? 'Cuidados para sua suculenta' : 'Isto é o que observamos';
   resultContent.replaceChildren();
   const card = document.createElement('article');
   card.className = 'result-card';
@@ -109,34 +109,34 @@ function showResult(result, mode) {
   photo.className = 'result-photo';
   const image = document.createElement('img');
   image.src = previewUrl;
-  image.alt = 'Foto enviada para orientación visual';
+  image.alt = 'Foto enviada para orientação visual';
   photo.append(image);
   const body = document.createElement('div');
   body.className = 'result-body';
   const status = document.createElement('span');
   status.className = `status-pill ${result.status || 'sin_lectura'}`;
-  status.textContent = ({ general: 'CUIDADOS ESENCIALES', bien: 'SE VE BIEN', atencion: 'MERECE ATENCIÓN', urgente: 'REVISA PRONTO', sin_lectura: 'NECESITAMOS OTRA FOTO' })[result.status] || 'ORIENTACIÓN VISUAL';
+  status.textContent = ({ general: 'CUIDADOS ESSENCIAIS', bien: 'PARECE BEM', atencion: 'MERECE ATENÇÃO', urgente: 'REVISE LOGO', sin_lectura: 'PRECISAMOS DE OUTRA FOTO' })[result.status] || 'ORIENTAÇÃO VISUAL';
   const title = document.createElement('h3');
-  title.textContent = result.title || 'Tu orientación visual';
+  title.textContent = result.title || 'Sua orientação visual';
   const summary = document.createElement('p');
-  summary.textContent = result.summary || 'Revisa la foto y prueba de nuevo.';
+  summary.textContent = result.summary || 'Revise a foto e tente novamente.';
   body.append(status, title, summary);
   const grid = document.createElement('div');
   grid.className = 'result-grid';
   const panels = [
-    listPanel('LO QUE SE VE EN LA FOTO', result.visibleSigns),
-    listPanel('POSIBLES CAUSAS', result.possibleCauses),
-    listPanel('QUÉ REVISAR PRIMERO', result.firstSteps, true),
-    listPanel('POR AHORA, EVITA', result.avoid),
-    textPanel('SI NO AJUSTAS EL CUIDADO', result.outlook),
-    textPanel('CUÁNDO VOLVER A REVISAR', result.recheck, true)
+    listPanel('O QUE APARECE NA FOTO', result.visibleSigns),
+    listPanel('POSSÍVEIS CAUSAS', result.possibleCauses),
+    listPanel('O QUE REVISAR PRIMEIRO', result.firstSteps, true),
+    listPanel('POR ENQUANTO, EVITE', result.avoid),
+    textPanel('SE O CUIDADO NÃO FOR AJUSTADO', result.outlook),
+    textPanel('QUANDO OBSERVAR NOVAMENTE', result.recheck, true)
   ];
   panels.filter(Boolean).forEach(panel => grid.append(panel));
   body.append(grid);
   if (!isGeneral) {
     const disclaimer = document.createElement('div');
     disclaimer.className = 'result-disclaimer';
-    disclaimer.textContent = 'Orientación basada en señales visibles. No es un diagnóstico definitivo.';
+    disclaimer.textContent = 'Orientação baseada em sinais visíveis. Não é um diagnóstico definitivo.';
     body.append(disclaimer);
   }
   card.append(photo, body);
@@ -149,12 +149,12 @@ form.addEventListener('submit', async event => {
   event.preventDefault();
   clearError();
   if (!selectedFile) {
-    showError('Primero sube o toma una foto de tu suculenta.');
+    showError('Primeiro envie ou tire uma foto da sua suculenta.');
     photoInput.focus();
     return;
   }
   button.disabled = true;
-  button.querySelector('span:nth-child(2)').textContent = 'PREPARANDO TUS CUIDADOS...';
+  button.querySelector('span:nth-child(2)').textContent = 'PREPARANDO SUA ORIENTAÇÃO...';
   try {
     const image = await prepareImage(selectedFile);
     const response = await fetch('/api/analyze', {
@@ -169,14 +169,14 @@ form.addEventListener('submit', async event => {
       })
     });
     const data = await response.json();
-    if (!response.ok) throw new Error(data.error || 'No pudimos analizar tu foto. Inténtalo otra vez.');
+    if (!response.ok) throw new Error(data.error || 'Não foi possível analisar sua foto. Tente novamente.');
     showResult(data.result, data.mode);
   } catch (error) {
-    if (error.message === 'El código de acceso no es válido.') document.querySelector('.access-details').open = true;
-    showError(error.message === 'Failed to fetch' ? 'No se pudo conectar. Abre el sitio publicado en Vercel o inicia el servidor local.' : error.message);
+    if (error.message === 'O código de acesso não é válido.') document.querySelector('.access-details').open = true;
+    showError(error.message === 'Failed to fetch' ? 'Não foi possível conectar. Abra o site publicado na Vercel ou inicie o servidor local.' : error.message);
   } finally {
     button.disabled = false;
-    button.querySelector('span:nth-child(2)').textContent = 'VER CÓMO CUIDAR MI SUCULENTA';
+    button.querySelector('span:nth-child(2)').textContent = 'VER COMO CUIDAR DA MINHA SUCULENTA';
   }
 });
 

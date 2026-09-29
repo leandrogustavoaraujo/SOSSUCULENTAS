@@ -3,10 +3,10 @@ import handler from '../api/analyze.js';
 
 const image = 'data:image/jpeg;base64,' + Buffer.from('test image').toString('base64');
 const sampleResult = {
-  plantVisible: true, status: 'atencion', title: 'Revisa sus hojas', summary: 'Se ven algunas hojas blandas.',
-  visibleSigns: ['Hojas blandas'], possibleCauses: ['Podría haber exceso de humedad'],
-  firstSteps: ['Revisa si el sustrato está seco'], avoid: ['No riegues de nuevo todavía'],
-  outlook: 'Si la humedad continúa, podría empeorar.', recheck: 'Observa la planta en dos días.'
+  plantVisible: true, status: 'atencion', title: 'Observe as folhas', summary: 'Algumas folhas parecem moles.',
+  visibleSigns: ['Folhas moles'], possibleCauses: ['Pode haver excesso de umidade'],
+  firstSteps: ['Verifique se o substrato está seco'], avoid: ['Não regue novamente por enquanto'],
+  outlook: 'Se a umidade continuar, o quadro pode piorar.', recheck: 'Observe a planta novamente em dois dias.'
 };
 
 function response() {
@@ -40,7 +40,7 @@ globalThis.fetch = async (_url, options) => {
 };
 try {
   const success = response();
-  await handler({ method: 'POST', body: { image, accessCode: 'premium', watering: 'Hace 4 a 7 días' } }, success);
+  await handler({ method: 'POST', body: { image, accessCode: 'premium', watering: 'Há 4 a 7 dias' } }, success);
   assert.equal(success.statusCode, 200);
   assert.equal(success.body.result.title, sampleResult.title);
   console.log('API: guia geral, código, validação da imagem e resposta personalizada verificados.');

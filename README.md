@@ -1,6 +1,6 @@
 # SOS Suculentas
 
-Web app em espanhol para o Plano Premium do Mini Vivero Rentable. A pessoa envia uma foto e recebe orientações de cuidado. Sem chave da API, o app apresenta uma guia geral; com a chave configurada, a função usa a foto e as informações opcionais de luz, rega e drenagem para gerar uma orientação visual individual.
+Web app em português do Brasil para o Plano Premium do Método Suculenta Rentável. A pessoa envia uma foto e recebe orientações de cuidado. Sem chave da API, o app apresenta um guia geral; com a chave configurada, a função usa a foto e as informações opcionais de luz, rega e drenagem para gerar uma orientação visual individual.
 
 ## Publicar pelo GitHub e Vercel
 
@@ -12,7 +12,7 @@ Web app em espanhol para o Plano Premium do Mini Vivero Rentable. A pessoa envia
    - `OPENAI_MODEL`: opcional; o padrão é `gpt-4o-mini`.
 4. Faça o deploy. Depois de alterar variáveis, faça um novo deploy para aplicá-las.
 
-No modo geral, a foto é enviada à função do próprio projeto para liberar a guia, mas seu conteúdo não é avaliado. As fotos não são gravadas em banco de dados. No modo personalizado, a função envia a foto à API OpenAI. O código de acesso compartilhado é uma proteção simples; se precisar liberar acesso individual por comprador, será necessária uma integração de autenticação/Hotmart.
+No modo geral, a foto é enviada à função do próprio projeto para liberar o guia, mas seu conteúdo não é avaliado. As fotos não são gravadas em banco de dados. No modo personalizado, a função envia a foto à API OpenAI. O código de acesso compartilhado é uma proteção simples; se precisar liberar acesso individual por comprador, será necessária uma integração de autenticação/Hotmart.
 
 ## Testar no computador
 

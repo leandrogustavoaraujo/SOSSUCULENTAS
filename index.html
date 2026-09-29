@@ -3,275 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aprenda a multiplicar, cultivar e organizar suculentas para criar um mini viveiro em casa.">
-  <title>Método Suculenta Rentável</title>
+  <meta name="theme-color" content="#123e32">
+  <meta name="description" content="Envie uma foto da sua suculenta e receba orientações claras sobre o que observar e quais cuidados revisar.">
+  <title>SOS Suculentas · Método Suculenta Rentável</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1698121791282770');
-    fbq('track', 'PageView');
-  </script>
-  <!-- UTMify: mantém os parâmetros de campanha nos links de checkout -->
-  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1698121791282770&amp;ev=PageView&amp;noscript=1"></noscript>
-  <div class="offer-bar">OFERTA VÁLIDA HOJE - <span id="offer-date"></span></div>
-  <main>
-    <section class="section hero" id="inicio">
-      <div class="container hero-inner reveal">
-        <span class="eyebrow">MÉTODO SUCULENTA RENTÁVEL</span>
-        <h1>TRANSFORME SUCULENTAS EM UM NEGÓCIO ALTAMENTE LUCRATIVO</h1>
-        <p class="hero-copy">Aprenda quais espécies escolher, como multiplicar, cultivar e cuidar delas para criar seu próprio estoque, mesmo que hoje você tenha pouco espaço e nunca tenha cultivado para vender.</p>
-        <img id="hero-product" class="generated-image hero-product-image" src="assets/generated/hero-product-suculenta-rentavel.webp" alt="Guia Método Suculenta Rentável com páginas internas, suculentas e produtos preparados para vender" width="900" height="900" fetchpriority="high">
-        <a class="button button-primary pulse" href="#planes">GARANTIR APOSTILA</a>
-        <p class="trust-line">Acesso imediato <b>•</b> Pagamento único <b>•</b> Garantia de 7 dias</p>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="SOS Suculentas, inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 29c-1-8 0-13 1-18M16 21C7 22 4 17 4 11c7-1 11 1 13 7M17 15c0-7 4-10 11-11 1 7-2 12-11 13"/></svg></span>
+      <span>SOS <strong>Suculentas</strong><small>MÉTODO SUCULENTA RENTÁVEL</small></span>
+    </a>
+    <span class="topbar-tag"><span class="dot"></span> SUA ASSISTENTE DE CUIDADOS</span>
+  </header>
+
+  <main id="inicio">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow"><span aria-hidden="true">✦</span> UMA AJUDA NA HORA CERTA</span>
+        <h1>Cuide melhor da sua <em>suculenta.</em></h1>
+        <p>Envie uma foto da sua suculenta e receba uma orientação simples sobre luz, rega, substrato e crescimento.</p>
+        <div class="hero-points" aria-label="Como funciona"><span><b>01</b> Envie sua foto</span><i></i><span><b>02</b> Receba a orientação</span><i></i><span><b>03</b> Cuide com clareza</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-photo"></div>
+        <div class="floating-note"><span class="note-icon">✦</span><span><b>Uma foto, mais clareza</b><small>Observe · entenda · cuide</small></span></div>
       </div>
     </section>
 
-    <section class="section received-section" id="recibes">
-      <div class="container reveal">
-        <div class="section-heading">
-          <span class="section-tag">CONTEÚDO COMPLETO</span>
-          <h2>O QUE VOCÊ VAI RECEBER</h2>
-        </div>
-        <div class="ebook-pages-preview" aria-label="Páginas do guia Método Suculenta Rentável">
-          <figure><img src="assets/generated/ebook-page-01-br.webp" alt="Página do guia para escolher plantas-mãe saudáveis" loading="lazy"><figcaption>ESCOLHA SUAS PLANTAS-MÃE</figcaption></figure>
-          <figure><img src="assets/generated/ebook-page-02-br.webp" alt="Página do guia com o passo a passo da propagação por folha" loading="lazy"><figcaption>PROPAGAÇÃO POR FOLHA</figcaption></figure>
-          <figure><img src="assets/generated/ebook-page-03-br.webp" alt="Página do guia sobre brotos e estacas" loading="lazy"><figcaption>BROTOS E ESTACAS</figcaption></figure>
-          <figure><img src="assets/generated/ebook-page-04-br.webp" alt="Página do guia sobre substrato, rega e luz" loading="lazy"><figcaption>SUBSTRATO, REGA E LUZ</figcaption></figure>
-        </div>
-        <div class="receives-layout">
-          <ul class="check-list large-check-list">
-            <li>Guia completo de espécies</li>
-            <li>Métodos de propagação</li>
-            <li>Cuidados em cada etapa</li>
-            <li>Rega e iluminação</li>
-            <li>Substratos e vasos</li>
-            <li>Transplantes</li>
-            <li>Problemas frequentes</li>
-            <li>Organização das mudas</li>
-            <li>Preparação para a venda</li>
-            <li>Ideias de produtos</li>
-            <li>Organização de pequenos pedidos</li>
-          </ul>
-        </div>
+    <section class="workspace shell" aria-labelledby="form-title">
+      <div class="workspace-heading"><div><span class="section-kicker">VAMOS COMEÇAR</span><h2 id="form-title">Mostre sua planta</h2><p>Envie uma foto e descubra os cuidados essenciais para mantê-la saudável.</p></div><span class="step-pill">PASSO 1 DE 2</span></div>
+      <div class="workspace-grid">
+        <form id="analysis-form" class="upload-card" novalidate>
+          <label for="photo" id="drop-zone" class="drop-zone">
+            <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" required>
+            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l1.5-2h7L17 7h3v12H4V7Z"/><circle cx="12" cy="13" r="3"/><path d="M18 10h.01"/></svg></span>
+            <strong id="photo-title">Envie ou tire uma foto</strong>
+            <span id="photo-help">Toque aqui ou arraste uma imagem</span>
+            <small>JPG, PNG ou WEBP · até 10 MB</small>
+            <img id="photo-preview" alt="Prévia da sua suculenta" hidden>
+            <span id="change-photo" class="change-photo" hidden>Trocar foto</span>
+          </label>
+
+          <div class="care-fields">
+            <h3>Conte um pouco mais <span>OPCIONAL</span></h3>
+            <div class="field-grid">
+              <label>Quando você regou?<select id="watering" name="watering"><option value="Não informado">Selecionar</option><option>Há menos de 3 dias</option><option>Há 4 a 7 dias</option><option>Há 1 a 2 semanas</option><option>Há mais de 2 semanas</option><option>Não me lembro</option></select></label>
+              <label>Que tipo de luz ela recebe?<select id="light" name="light"><option value="Não informado">Selecionar</option><option>Sol direto</option><option>Muita luz indireta</option><option>Pouca luz</option><option>Não sei</option></select></label>
+            </div>
+            <label class="drainage-label">O vaso tem furo de drenagem?<select id="drainage" name="drainage"><option value="Não informado">Selecionar</option><option>Sim, tem drenagem</option><option>Não tem drenagem</option><option>Não sei</option></select></label>
+          </div>
+          <details class="access-details"><summary>Tenho um código de acesso <span>+</span></summary><label for="access-code">Código de acesso</label><input id="access-code" type="text" autocomplete="off" placeholder="Digite o código recebido"></details>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <button id="analyze-button" class="primary-button" type="submit"><span class="button-symbol">✦</span><span>VER COMO CUIDAR DA MINHA SUCULENTA</span><span class="button-arrow">→</span></button>
+          <p class="privacy-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 16 5v4c0 4-2.5 7-6 9-3.5-2-6-5-6-9V5l6-3Z"/></svg>Sua foto é enviada com segurança e não fica armazenada neste site.</p>
+        </form>
+
+        <aside class="guide-card"><div class="guide-head"><span class="guide-icon">☀</span><span>PARA UMA ORIENTAÇÃO MELHOR</span></div><h3>Uma boa foto<br>faz toda a diferença.</h3><ul><li><span>1</span>Use luz natural e deixe as folhas bem focadas.</li><li><span>2</span>Mostre também o caule e o substrato.</li><li><span>3</span>Evite filtros ou fotos tiradas de longe.</li></ul><div class="guide-bottom"><span class="mini-leaf">✳</span><p>Você não precisa saber o nome da espécie para começar.</p></div></aside>
       </div>
     </section>
 
-    <section class="section mechanism-section" id="metodo">
-      <div class="container narrow reveal">
-        <div class="section-heading">
-          <span class="section-tag">O PRINCÍPIO DO MÉTODO</span>
-          <h2>UMA SUCULENTA PODE SE TRANSFORMAR EM CENTENAS</h2>
-          <p>Algumas suculentas podem se multiplicar por folhas, estacas, brotos ou divisão. No guia, você aprende qual método usar e como cuidar de cada etapa.</p>
-        </div>
-        <div class="mechanism-flow" aria-label="Etapas de crescimento do mini viveiro">
-          <strong>PLANTA</strong><i>→</i><strong>NOVAS MUDAS</strong><i>→</i><strong>MAIS ESTOQUE</strong><i>→</i><strong>PRODUTOS PARA VENDER</strong>
-        </div>
-        <div class="mechanism-carousel" aria-label="Do cultivo de uma folha à venda de produtos com suculentas">
-          <figure><img src="assets/generated/method-carousel-01.webp" alt="Folha de suculenta preparada sobre o substrato" loading="lazy"><figcaption>COMECE COM UMA FOLHA</figcaption></figure>
-          <figure><img src="assets/generated/method-carousel-02.webp" alt="Bandeja com muitas suculentas novas" loading="lazy"><figcaption>MULTIPLIQUE SEU ESTOQUE</figcaption></figure>
-          <figure><img src="assets/generated/method-carousel-03.webp" alt="Suculenta preparada para presente" loading="lazy"><figcaption>CRIE PRODUTOS</figcaption></figure>
-          <figure><img src="assets/generated/pix-recebido-ilustrativo.webp" alt="Mão brasileira segurando celular com notificações ilustrativas de Pix recebido" loading="lazy"><figcaption>VENDA MAIS</figcaption></figure>
-        </div>
-        <a class="button button-primary pulse" href="#planes">GARANTIR APOSTILA</a>
-      </div>
-    </section>
-
-    <section class="section comparison-section" id="comparacion">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2>PORQUE O MÉTODO FUNCIONA</h2>
-        </div>
-        <div class="comparison-grid">
-          <article class="comparison-card comparison-negative">
-            <div class="card-title"><span class="status-icon">×</span><h3>APENAS COMPRAR E REVENDER</h3></div>
-            <ul>
-              <li>Compra plantas novas toda vez que quer vender</li>
-              <li>Não sabe quais espécies escolher</li>
-              <li>Depende sempre de fornecedores</li>
-              <li>Pode perder plantas por erros de cultivo</li>
-              <li>Não sabe como multiplicar corretamente</li>
-              <li>Não constrói seu próprio estoque</li>
-            </ul>
-          </article>
-          <article class="comparison-card comparison-positive">
-            <span class="recommended">RECOMENDADO</span>
-            <div class="card-title"><span class="status-icon">✓</span><h3>MÉTODO SUCULENTA RENTÁVEL</h3></div>
-            <ul>
-              <li>Aprende quais espécies multiplicar</li>
-              <li>Produz novas mudas</li>
-              <li>Constrói seu estoque aos poucos</li>
-              <li>Aprende a cultivar e cuidar</li>
-              <li>Transforma plantas em produtos</li>
-              <li>Pode preparar kits e encomendas em quantidade</li>
-            </ul>
-          </article>
-        </div>
-        <p class="section-closing">A diferença está em aprender a produzir, não apenas em comprar para revender.</p>
-        <a class="button button-primary pulse" href="#planes">GARANTIR APOSTILA</a>
-      </div>
-    </section>
-
-    <section class="section learning-section" id="contenido">
-      <div class="container reveal">
-        <div class="section-heading">
-          <span class="section-tag">COMECE COM O QUE VOCÊ JÁ TEM</span>
-          <h2>O QUE VOCÊ PRECISA PARA COMEÇAR</h2>
-        </div>
-        <div class="essentials-scroll" aria-label="Materiais simples para começar um mini viveiro">
-          <figure><img src="assets/generated/learning-species.webp" alt="Plantas saudáveis para começar" loading="lazy"><figcaption>PLANTAS SAUDÁVEIS</figcaption></figure>
-          <figure><img src="assets/generated/learning-propagation.webp" alt="Folhas e brotos para multiplicar" loading="lazy"><figcaption>FOLHAS E BROTOS</figcaption></figure>
-          <figure><img src="assets/generated/simple-pots.webp" alt="Vasos simples" loading="lazy"><figcaption>VASOS SIMPLES</figcaption></figure>
-          <figure><img src="assets/generated/learning-substrate.webp" alt="Substrato para suculentas" loading="lazy"><figcaption>SUBSTRATO</figcaption></figure>
-          <figure><img src="assets/generated/simple-containers.webp" alt="Recipientes e bandejas reutilizáveis" loading="lazy"><figcaption>RECIPIENTES E BANDEJAS</figcaption></figure>
-          <figure><img src="assets/generated/simple-tools.webp" alt="Tesoura limpa e ferramentas simples" loading="lazy"><figcaption>TESOURA E FERRAMENTAS</figcaption></figure>
-          <figure><img src="assets/generated/simple-light.webp" alt="Luz natural perto de uma janela" loading="lazy"><figcaption>LUZ NATURAL</figcaption></figure>
-          <figure><img src="assets/generated/learning-organization.webp" alt="Organização simples para crescer" loading="lazy"><figcaption>ORGANIZAÇÃO SIMPLES</figcaption></figure>
-        </div>
-        <a class="button button-primary pulse" href="#planes">GARANTIR APOSTILA</a>
-      </div>
-    </section>
-
-    <section class="section products-section" id="productos">
-      <div class="container reveal">
-        <div class="section-heading">
-          <span class="section-tag">DA PLANTA AO PRODUTO</span>
-          <h2>NÃO VENDA APENAS UMA PLANTA</h2>
-          <h3 class="subheadline">TRANSFORME-A EM UM PRODUTO QUE AS PESSOAS QUEIRAM COMPRAR</h3>
-        </div>
-        <div class="product-scroll" aria-label="Ideias de produtos com suculentas">
-          <figure id="product-wedding" class="product-slot"><img src="assets/generated/product-wedding.webp" alt="Lembrancinhas de casamento com suculentas" loading="lazy"><figcaption>LEMBRANCINHA DE CASAMENTO</figcaption></figure>
-          <figure id="product-baptism" class="product-slot"><img src="assets/generated/product-baptism.webp" alt="Lembrancinhas de batizado com suculentas" loading="lazy"><figcaption>BATIZADO</figcaption></figure>
-          <figure id="product-baby-shower" class="product-slot"><img src="assets/generated/product-baby-shower.webp" alt="Lembrancinhas de chá de bebê com suculentas" loading="lazy"><figcaption>CHÁ DE BEBÊ</figcaption></figure>
-          <figure id="product-xv" class="product-slot"><img src="assets/generated/product-xv.webp" alt="Lembrancinhas de festa de 15 anos com suculentas" loading="lazy"><figcaption>FESTA DE 15 ANOS</figcaption></figure>
-          <figure id="product-gift" class="product-slot"><img src="assets/generated/product-gift.webp" alt="Suculenta preparada para presente" loading="lazy"><figcaption>PRESENTE</figcaption></figure>
-          <figure id="product-arrangement" class="product-slot"><img src="assets/generated/product-arrangement.webp" alt="Mini arranjo comercial de suculentas" loading="lazy"><figcaption>MINI ARRANJO</figcaption></figure>
-          <figure id="product-kit" class="product-slot"><img src="assets/generated/product-kit.webp" alt="Kit de cultivo de suculentas pronto para vender" loading="lazy"><figcaption>KIT</figcaption></figure>
-          <figure id="product-custom" class="product-slot"><img src="assets/generated/product-custom.webp" alt="Encomenda personalizada de suculentas pronta para entrega" loading="lazy"><figcaption>ENCOMENDA PERSONALIZADA</figcaption></figure>
-        </div>
-        <p class="section-closing">Uma planta simples pode ganhar muito mais valor quando tem apresentação, propósito e uma ocasião específica de compra.</p>
-        <a class="button button-primary pulse" href="#planes">GARANTIR APOSTILA</a>
-      </div>
-    </section>
-
-    <section class="section bonuses-section" id="bonos">
-      <div class="container reveal">
-        <div class="section-heading">
-          <span class="section-tag">BÔNUS INCLUSOS</span>
-          <h2>VOCÊ TAMBÉM VAI RECEBER</h2>
-        </div>
-        <div class="bonus-grid">
-          <article class="bonus-card"><img id="bonus-01" class="bonus-image" src="assets/generated/bonus-01-br.webp" alt="Mockup do Catálogo de Produtos com Suculentas" loading="lazy"><div class="bonus-copy"><small>BÔNUS 01</small><h3>CATÁLOGO DE PRODUTOS COM SUCULENTAS</h3><p>Ideias de produtos para lembrancinhas, presentes, eventos, kits e mini arranjos.</p><div class="bonus-value"><s>R$ 27,90</s><strong>HOJE GRÁTIS</strong></div></div></article>
-          <article class="bonus-card"><img id="bonus-02" class="bonus-image" src="assets/generated/bonus-02-br.webp" alt="Mockup do Guia Rápido de Propagação" loading="lazy"><div class="bonus-copy"><small>BÔNUS 02</small><h3>GUIA RÁPIDO DE PROPAGAÇÃO</h3><p>Uma consulta simples para entender quais métodos usar com diferentes tipos de suculentas.</p><div class="bonus-value"><s>R$ 27,90</s><strong>HOJE GRÁTIS</strong></div></div></article>
-          <article class="bonus-card"><img id="bonus-03" class="bonus-image" src="assets/generated/bonus-03-br.webp" alt="Mockup do Checklist do Mini Viveiro" loading="lazy"><div class="bonus-copy"><small>BÔNUS 03</small><h3>CHECKLIST DO MINI VIVEIRO</h3><p>Organize plantas-mãe, propagação, mudas novas, crescimento e plantas prontas.</p><div class="bonus-value"><s>R$ 27,90</s><strong>HOJE GRÁTIS</strong></div></div></article>
-          <article class="bonus-card"><img id="bonus-04" class="bonus-image" src="assets/generated/bonus-04-br.webp" alt="Mockup do Guia de Problemas e Cuidados" loading="lazy"><div class="bonus-copy"><small>BÔNUS 04</small><h3>GUIA DE PROBLEMAS E CUIDADOS</h3><p>Identifique sinais comuns antes que um pequeno problema acabe prejudicando sua planta.</p><div class="bonus-value"><s>R$ 27,90</s><strong>HOJE GRÁTIS</strong></div></div></article>
-        </div>
-        <a class="button button-primary pulse" href="#planes">GARANTIR APOSTILA</a>
-      </div>
-    </section>
-
-    <section class="section sos-section" id="sos">
-      <div class="container reveal">
-        <div class="section-heading light-heading">
-          <span class="section-tag gold-tag">EXCLUSIVO DO PLANO PREMIUM</span>
-          <h2>SUA SUCULENTA COMEÇOU A PARECER ESTRANHA?</h2>
-          <h3 class="subheadline">TIRE UMA FOTO E DEIXE O APLICATIVO ORIENTAR VOCÊ</h3>
-        </div>
-        <div class="sos-visuals">
-          <img id="sos-phone" class="sos-product-image" src="assets/generated/sos-phone-br.webp" alt="Celular com tela para enviar uma foto ao SOS Suculentas" loading="lazy">
-          <img id="sos-result" class="sos-product-image" src="assets/generated/sos-result-br.webp" alt="Exemplo de orientação do SOS Suculentas com possível causa e cuidados a verificar" loading="lazy">
-        </div>
-        <p class="sos-app-copy">Com o SOS Suculentas, você envia uma foto e o aplicativo analisa os sinais visíveis da sua planta. Você recebe uma orientação clara sobre o que pode estar acontecendo, o que verificar primeiro e como ela pode evoluir se os cuidados não forem ajustados.</p>
-        <div class="sos-flow"><span>📸 <b>ENVIE A FOTO</b></span><i>→</i><span>🔍 <b>O APP ANALISA</b></span><i>→</i><span>🌱 <b>RECEBA A ORIENTAÇÃO</b></span></div>
-        <p class="sos-note">A orientação se baseia nos sinais visíveis e ajuda você a verificar os cuidados adequados para sua planta.</p>
-        <a class="button button-gold pulse" href="#planes">GARANTIR APOSTILA</a>
-      </div>
-    </section>
-
-    <section class="section pricing-section" id="planes">
-      <div class="container reveal">
-        <div class="section-heading"><h2>ESCOLHA COMO QUER COMEÇAR</h2></div>
-        <div class="pricing-grid">
-          <article class="price-card basic-plan">
-            <h3>MÉTODO SUCULENTA RENTÁVEL</h3>
-            <img class="plan-image plan-image-basic" src="assets/generated/hero-product-suculenta-rentavel.webp" alt="Guia Método Suculenta Rentável" loading="lazy">
-            <ul class="purchase-features">
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Acesso imediato por e-mail</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>7 dias de garantia</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8C4 8 2 9.8 2 12s2 4 4.5 4c3 0 4-2.5 5.5-4 1.5-1.5 2.5-4 5.5-4 2.5 0 4.5 1.8 4.5 4s-2 4-4.5 4c-3 0-4-2.5-5.5-4-1.5-1.5-2.5-4-5.5-4Z"/></svg></span>Acesso vitalício</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>Pagamento único</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M12 9v12M3 13h18M2 9h20M12 9C7 9 6 6 7 4c1-2 5-1 5 5ZM12 9c5 0 6-3 5-5-1-2-5-1-5 5Z"/></svg></span>4 bônus inclusos</li>
-            </ul>
-            <div class="price"><span class="price-before">De <s>R$ 59,90</s> por</span><div class="price-current"><strong>R$9,90</strong><b class="price-off">-83%</b></div></div>
-            <a class="button button-gold pulse" href="https://pay.hotmart.com/X107758819U?off=7bunsvy1&amp;checkoutMode=10" data-checkout-value="9.90">GARANTIR APOSTILA</a>
-            <p class="secure"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.45-2.85 8.45-7 10-4.15-1.55-7-5.55-7-10V6l7-3Z"/><path d="m8.8 12 2.05 2.05L15.4 9.5"/></svg>Compra 100% segura</p>
-          </article>
-          <article class="price-card premium-plan">
-            <span class="plan-badge">MAIS COMPLETO</span>
-            <h3>MÉTODO SUCULENTA RENTÁVEL PREMIUM</h3>
-            <img class="plan-image plan-image-premium" src="assets/generated/mockup-plano-premium-suculenta-rentavel.webp" alt="Método Suculenta Rentável completo com apostila, bônus e aplicativo SOS Suculentas" loading="lazy">
-            <ul class="purchase-features">
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Acesso imediato por e-mail</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>7 dias de garantia</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8C4 8 2 9.8 2 12s2 4 4.5 4c3 0 4-2.5 5.5-4 1.5-1.5 2.5-4 5.5-4 2.5 0 4.5 1.8 4.5 4s-2 4-4.5 4c-3 0-4-2.5-5.5-4-1.5-1.5-2.5-4-5.5-4Z"/></svg></span>Acesso vitalício</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>Pagamento único</li>
-              <li><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M12 9v12M3 13h18M2 9h20M12 9C7 9 6 6 7 4c1-2 5-1 5 5ZM12 9c5 0 6-3 5-5-1-2-5-1-5 5Z"/></svg></span>Apostila + 4 bônus + SOS Suculentas</li>
-            </ul>
-            <div class="price"><span class="price-before">De <s>R$ 129,90</s> por</span><div class="price-current"><strong>R$27,90</strong><b class="price-off">-78%</b></div></div>
-            <a class="button button-gold pulse" href="https://pay.hotmart.com/X107758819U?off=2nnxe4nc&amp;checkoutMode=10" data-checkout-value="27.90">QUERO O PLANO PREMIUM</a>
-            <p class="secure"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.45-2.85 8.45-7 10-4.15-1.55-7-5.55-7-10V6l7-3Z"/><path d="m8.8 12 2.05 2.05L15.4 9.5"/></svg>Compra 100% segura</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section guarantee-section" id="garantia">
-      <div class="container guarantee-card reveal">
-        <img id="guarantee-seal" class="guarantee-image" src="assets/generated/guarantee-seal-br.webp" alt="Garantia de 7 dias" loading="lazy">
-        <div><h2>GARANTIA DE 7 DIAS</h2><p>Acesse o conteúdo e confira o material com tranquilidade. Se, dentro do prazo de garantia, você decidir que ele não é para você, poderá solicitar o reembolso conforme as condições da compra.</p></div>
-      </div>
-      <a class="button button-primary pulse" href="#planes">QUERO COMEÇAR SEM RISCO</a>
-    </section>
-
-    <section class="section faq-section" id="faq">
-      <div class="container narrow reveal">
-        <div class="section-heading"><h2>PERGUNTAS FREQUENTES</h2></div>
-        <div class="faq-list">
-          <article class="faq-item open"><button type="button" aria-expanded="true"><span>Preciso ter experiência com suculentas?</span><b>−</b></button><div class="faq-answer"><p>Não. O guia foi organizado para acompanhar você desde os conceitos básicos e ajudar a avançar passo a passo.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Preciso de muitas plantas para começar?</span><b>+</b></button><div class="faq-answer"><p>Não. Você pode começar com poucas plantas adequadas e construir seu estoque aos poucos.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Todas as suculentas se multiplicam da mesma forma?</span><b>+</b></button><div class="faq-answer"><p>Não. O método depende da espécie. O guia explica quando usar folhas, estacas, brotos ou divisão.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Preciso de muito espaço?</span><b>+</b></button><div class="faq-answer"><p>Não. O método pode ser adaptado a espaços pequenos, desde que você ofereça condições adequadas de luz, ventilação e organização.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>O que está incluído no plano de R$ 9,90?</span><b>+</b></button><div class="faq-answer"><p>Inclui o guia completo e os quatro bônus digitais apresentados nesta página.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>O que está incluído no Plano Premium de R$ 27,90?</span><b>+</b></button><div class="faq-answer"><p>Inclui tudo do Plano Básico e acesso ao SOS Suculentas.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Como funciona o SOS Suculentas?</span><b>+</b></button><div class="faq-answer"><p>Você envia uma foto e recebe uma orientação simples sobre sinais visíveis, possíveis causas e quais cuidados verificar.</p></div></article>
-          <article class="faq-item"><button type="button" aria-expanded="false"><span>Tenho garantia?</span><b>+</b></button><div class="faq-answer"><p>Sim. Você tem 7 dias para conferir o conteúdo e solicitar um reembolso conforme as condições da compra.</p></div></article>
-        </div>
-        <a class="button button-primary pulse" href="#planes">QUERO CRIAR MEU MINI VIVEIRO</a>
-      </div>
-    </section>
-
-    <section class="section final-cta-section">
-      <div class="container narrow reveal">
-        <h2>SEU MINI VIVEIRO PODE COMEÇAR COM POUCAS PLANTAS</h2>
-        <p>Aprenda a multiplicá-las, cuidar delas e transformá-las em um estoque de produtos que você pode preparar para vender.</p>
-        <a class="button button-gold pulse" href="#planes">QUERO COMEÇAR AGORA</a>
-      </div>
+    <section id="result-section" class="result-section shell" aria-labelledby="result-title" hidden>
+      <div class="result-top"><div><span class="section-kicker">SEU RESULTADO</span><h2 id="result-title">Isto é o que observamos</h2><p>Uma orientação para decidir o que revisar primeiro.</p></div><button id="new-analysis" class="text-button" type="button">Analisar outra planta ↗</button></div>
+      <div id="result-content"></div>
     </section>
   </main>
-  <footer>© 2026. Todos os direitos reservados.</footer>
-  <script src="script.js"></script>
+
+  <footer><span>SOS Suculentas <small>por Método Suculenta Rentável</small></span><p>A orientação visual não substitui a avaliação de um especialista.</p></footer>
 </body>
 </html>
